@@ -1,0 +1,8 @@
+{
+  "phrases": [
+    {"text": "How are you?", "translation": "Apa kabar?"},
+    {"text": "Thank you", "translation": "Terima kasih"},
+    {"text": "Please help me", "translation": "Tolong bantu saya"},
+    {"text": "I don't understand", "translation": "Saya tidak mengerti"}
+  ]
+}
