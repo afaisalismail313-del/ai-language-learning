@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعلم العربية</title>
+    <title>تعلم العربية - AI Language Learning</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/arabic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,11 +14,13 @@
         <div class="container">
             <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right"></i> رجوع</a>
             <h1><i class="fas fa-mosque"></i> تعلم العربية</h1>
+            <p class="subtitle">تحدث مع الذكاء الاصطناعي كل يوم</p>
         </div>
     </header>
 
     <main class="main-content">
         <div class="container">
+            <!-- 1. درس اليوم (Daily Lesson) -->
             <section class="lesson-section">
                 <h2>درس اليوم</h2>
                 <div class="lesson-card">
@@ -26,16 +28,19 @@
                     <p id="lesson-text-ar">جاري التحضير...</p>
                     <div class="vocabulary-list" id="vocabulary-list-ar"></div>
                 </div>
-                <button class="btn btn-primary" onclick="startLessonArabic()">ابدأ التدريب</button>
+                <button class="btn btn-primary" onclick="startLessonArabic()" style="margin-top: 15px;">
+                    <i class="fas fa-play"></i> ابدأ التدريب
+                </button>
             </section>
 
+            <!-- 2. محادثة نصية (Text Conversation) -->
             <section class="conversation-section">
-                <h2>محادثة مع الذكاء الاصطناعي</h2>
+                <h2><i class="fas fa-comments"></i> محادثة نصية مع الذكاء الاصطناعي</h2>
                 <div class="chat-container">
                     <div class="chat-messages" id="chat-messages-ar">
                         <div class="message ai-message">
                             <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                            <div class="message-content"><p>مرحباً! لنمارس العربية!</p></div>
+                            <div class="message-content"><p>مرحباً! لنمارس العربية بالكتابة!</p></div>
                         </div>
                     </div>
                     <div class="chat-input-area">
@@ -45,20 +50,67 @@
                 </div>
             </section>
 
-            <section class="tts-section">
-                <h2>ممارسة النطق</h2>
-                <textarea id="practice-text-ar" placeholder="أدخل النص..."></textarea>
-                <button class="btn btn-primary" onclick="speakTextArabic(document.getElementById('practice-text-ar').value)">
-                    <i class="fas fa-play"></i> استمع
-                </button>
+            <!-- 3. وضع المحادثة الصوتية (Voice Conversation Section - BARU) -->
+            <section class="voice-conversation-section">
+                <h2><i class="fas fa-headset"></i> وضع المحادثة الصوتية</h2>
+                <p class="voice-desc">اضغط على الميكروفون وابدأ التحدث. سيستمع الذكاء الاصطناعي ويرد بصوت.</p>
+                
+                <div class="voice-controls">
+                    <button class="btn btn-voice-start" id="btn-start-voice-ar" onclick="startVoiceConversationArabic()">
+                        <i class="fas fa-microphone"></i> ابدأ المحادثة الصوتية
+                    </button>
+                    <button class="btn btn-voice-stop" id="btn-stop-voice-ar" onclick="stopVoiceConversationArabic()" style="display:none;">
+                        <i class="fas fa-stop"></i> إيقاف
+                    </button>
+                </div>
+
+                <div class="voice-status" id="voice-status-ar">
+                    <div class="status-indicator" id="status-indicator-ar">
+                        <span class="status-dot"></span>
+                        <span class="status-text">جاهز</span>
+                    </div>
+                </div>
+
+                <div class="voice-visualizer" id="voice-visualizer-ar">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+
+                <div class="conversation-log" id="conversation-log-ar">
+                    <div class="log-entry ai-entry">
+                        <i class="fas fa-robot"></i>
+                        <p>مرحباً! أنا جاهز للتحدث. اضغط الميكروفون لنبدأ!</p>
+                    </div>
+                </div>
             </section>
 
+            <!-- 4. ممارسة النطق (Pronunciation Practice) -->
+            <section class="tts-section">
+                <h2><i class="fas fa-volume-up"></i> ممارسة النطق</h2>
+                <textarea id="practice-text-ar" placeholder="أدخل النص لممارسة النطق..."></textarea>
+                <div style="margin-top: 15px;">
+                    <button class="btn btn-primary" onclick="speakTextArabic(document.getElementById('practice-text-ar').value)">
+                        <i class="fas fa-play"></i> استمع
+                    </button>
+                </div>
+            </section>
+
+            <!-- 5. عبارات شائعة (Common Phrases) -->
             <section class="phrases-section">
-                <h2>عبارات شائعة</h2>
+                <h2><i class="fas fa-book"></i> عبارات شائعة</h2>
                 <div class="phrases-grid" id="phrases-grid-ar"></div>
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Language Learning - Arabic Practice</p>
+        </div>
+    </footer>
 
     <script src="../js/app.js"></script>
     <script src="../js/arabic.js"></script>
