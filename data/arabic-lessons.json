@@ -1,0 +1,26 @@
+{
+  "lessons": [
+    {
+      "title": "التحيات والتعارف",
+      "description": "تعلم كيفية التحية والتعارف.",
+      "vocabulary": [
+        {"word": "مرحباً", "meaning": "Halo"},
+        {"word": "صباح الخير", "meaning": "Selamat pagi"},
+        {"word": "اسمي...", "meaning": "Nama saya..."},
+        {"word": "تشرفت", "meaning": "Senang bertemu"},
+        {"word": "كيف حالك؟", "meaning": "Apa kabar?"}
+      ]
+    },
+    {
+      "title": "الأنشطة اليومية",
+      "description": "عبّر عن أنشطتك اليومية.",
+      "vocabulary": [
+        {"word": "أستيقظ", "meaning": "Saya bangun"},
+        {"word": "أتناول الفطور", "meaning": "Saya sarapan"},
+        {"word": "أذهب للعمل", "meaning": "Saya kerja"},
+        {"word": "أدرس", "meaning": "Saya belajar"},
+        {"word": "أنام", "meaning": "Saya tidur"}
+      ]
+    }
+  ]
+}
