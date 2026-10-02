@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Language Learning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1><i class="fas fa-language"></i> AI Language Learning</h1>
+            <p class="subtitle">Belajar Bahasa Inggris & Arab dengan AI</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="welcome-section">
+                <h2>Selamat Datang!</h2>
+                <p>Pilih bahasa yang ingin Anda pelajari:</p>
+                <div class="language-cards">
+                    <a href="pages/english.html" class="language-card english">
+                        <i class="fas fa-flag-usa"></i>
+                        <h3>English</h3>
+                        <p>Belajar Bahasa Inggris</p>
+                    </a>
+                    <a href="pages/arabic.html" class="language-card arabic">
+                        <i class="fas fa-mosque"></i>
+                        <h3>العربية</h3>
+                        <p>Belajar Bahasa Arab</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="progress-section">
+                <h3><i class="fas fa-chart-line"></i> Progres Harian</h3>
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" id="streak-days">0</span>
+                        <span class="stat-label">Hari Berturut-turut</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="lessons-completed">0</span>
+                        <span class="stat-label">Pelajaran Selesai</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="words-learned">0</span>
+                        <span class="stat-label">Kata Dipelajari</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 AI Language Learning</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
