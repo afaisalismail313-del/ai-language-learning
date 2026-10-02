@@ -1,0 +1,26 @@
+.arabic-header {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+body[dir="rtl"] .back-btn {
+    right: 20px;
+    left: auto;
+}
+
+.arabic-header h1 {
+    font-family: 'Amiri', serif;
+}
+
+.lesson-section h2 {
+    color: #fa709a;
+    font-family: 'Amiri', serif;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+}
+
+.message-avatar {
+    background: #fa709a;
+}
