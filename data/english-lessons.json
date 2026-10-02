@@ -1,0 +1,26 @@
+{
+  "lessons": [
+    {
+      "title": "Greetings & Introductions",
+      "description": "Learn how to greet people and introduce yourself.",
+      "vocabulary": [
+        {"word": "Hello", "meaning": "Halo"},
+        {"word": "Good morning", "meaning": "Selamat pagi"},
+        {"word": "My name is...", "meaning": "Nama saya..."},
+        {"word": "Nice to meet you", "meaning": "Senang bertemu"},
+        {"word": "How are you?", "meaning": "Apa kabar?"}
+      ]
+    },
+    {
+      "title": "Daily Activities",
+      "description": "Express your daily routines.",
+      "vocabulary": [
+        {"word": "I wake up", "meaning": "Saya bangun"},
+        {"word": "I eat breakfast", "meaning": "Saya sarapan"},
+        {"word": "I go to work", "meaning": "Saya kerja"},
+        {"word": "I study", "meaning": "Saya belajar"},
+        {"word": "I sleep", "meaning": "Saya tidur"}
+      ]
+    }
+  ]
+}
