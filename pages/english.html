@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn English</title>
+    <title>Learn English - AI Language Learning</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/english.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,28 +13,33 @@
         <div class="container">
             <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
             <h1><i class="fas fa-flag-usa"></i> Learn English</h1>
+            <p class="subtitle">Practice speaking with AI every day</p>
         </div>
     </header>
 
     <main class="main-content">
         <div class="container">
+            <!-- 1. Daily Lesson Section -->
             <section class="lesson-section">
                 <h2>Today's Lesson</h2>
                 <div class="lesson-card">
                     <h3 id="lesson-title">Loading...</h3>
-                    <p id="lesson-text">Preparing...</p>
+                    <p id="lesson-text">Preparing your lesson...</p>
                     <div class="vocabulary-list" id="vocabulary-list"></div>
                 </div>
-                <button class="btn btn-primary" onclick="startLesson()">Start Practice</button>
+                <button class="btn btn-primary" onclick="startLesson()" style="margin-top: 15px;">
+                    <i class="fas fa-play"></i> Start Practice
+                </button>
             </section>
 
+            <!-- 2. Text Chat Conversation Section -->
             <section class="conversation-section">
-                <h2>AI Conversation</h2>
+                <h2><i class="fas fa-comments"></i> AI Text Conversation</h2>
                 <div class="chat-container">
                     <div class="chat-messages" id="chat-messages">
                         <div class="message ai-message">
                             <div class="message-avatar"><i class="fas fa-robot"></i></div>
-                            <div class="message-content"><p>Hello! Let's practice English!</p></div>
+                            <div class="message-content"><p>Hello! Let's practice English by typing!</p></div>
                         </div>
                     </div>
                     <div class="chat-input-area">
@@ -44,20 +49,67 @@
                 </div>
             </section>
 
-            <section class="tts-section">
-                <h2>Pronunciation Practice</h2>
-                <textarea id="practice-text" placeholder="Enter text..."></textarea>
-                <button class="btn btn-primary" onclick="speakText(document.getElementById('practice-text').value)">
-                    <i class="fas fa-play"></i> Listen
-                </button>
+            <!-- 3. Voice Conversation Section (BARU) -->
+            <section class="voice-conversation-section">
+                <h2><i class="fas fa-headset"></i> Voice Conversation Mode</h2>
+                <p class="voice-desc">Tekan tombol mikrofon dan mulai berbicara. AI akan mendengarkan dan merespons dengan suara secara otomatis.</p>
+                
+                <div class="voice-controls">
+                    <button class="btn btn-voice-start" id="btn-start-voice" onclick="startVoiceConversation()">
+                        <i class="fas fa-microphone"></i> Mulai Percakapan Suara
+                    </button>
+                    <button class="btn btn-voice-stop" id="btn-stop-voice" onclick="stopVoiceConversation()" style="display:none;">
+                        <i class="fas fa-stop"></i> Hentikan
+                    </button>
+                </div>
+
+                <div class="voice-status" id="voice-status">
+                    <div class="status-indicator" id="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Siap</span>
+                    </div>
+                </div>
+
+                <div class="voice-visualizer" id="voice-visualizer">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+
+                <div class="conversation-log" id="conversation-log">
+                    <div class="log-entry ai-entry">
+                        <i class="fas fa-robot"></i>
+                        <p>Hi! I'm ready to talk. Click the microphone and let's start!</p>
+                    </div>
+                </div>
             </section>
 
+            <!-- 4. Pronunciation Practice Section -->
+            <section class="tts-section">
+                <h2><i class="fas fa-volume-up"></i> Pronunciation Practice</h2>
+                <textarea id="practice-text" placeholder="Enter text to practice pronunciation..."></textarea>
+                <div style="margin-top: 15px;">
+                    <button class="btn btn-primary" onclick="speakText(document.getElementById('practice-text').value)">
+                        <i class="fas fa-play"></i> Listen
+                    </button>
+                </div>
+            </section>
+
+            <!-- 5. Common Phrases Section -->
             <section class="phrases-section">
-                <h2>Common Phrases</h2>
+                <h2><i class="fas fa-book"></i> Common Phrases</h2>
                 <div class="phrases-grid" id="phrases-grid"></div>
             </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI Language Learning - English Practice</p>
+        </div>
+    </footer>
 
     <script src="../js/app.js"></script>
     <script src="../js/english.js"></script>
