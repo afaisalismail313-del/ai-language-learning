@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم العربية</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/arabic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header arabic-header">
+        <div class="container">
+            <a href="../index.html" class="back-btn"><i class="fas fa-arrow-right"></i> رجوع</a>
+            <h1><i class="fas fa-mosque"></i> تعلم العربية</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="lesson-section">
+                <h2>درس اليوم</h2>
+                <div class="lesson-card">
+                    <h3 id="lesson-title-ar">جاري التحميل...</h3>
+                    <p id="lesson-text-ar">جاري التحضير...</p>
+                    <div class="vocabulary-list" id="vocabulary-list-ar"></div>
+                </div>
+                <button class="btn btn-primary" onclick="startLessonArabic()">ابدأ التدريب</button>
+            </section>
+
+            <section class="conversation-section">
+                <h2>محادثة مع الذكاء الاصطناعي</h2>
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages-ar">
+                        <div class="message ai-message">
+                            <div class="message-avatar"><i class="fas fa-robot"></i></div>
+                            <div class="message-content"><p>مرحباً! لنمارس العربية!</p></div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="user-input-ar" placeholder="اكتب بالعربية..." />
+                        <button class="btn btn-primary" onclick="sendMessageArabic()">إرسال</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tts-section">
+                <h2>ممارسة النطق</h2>
+                <textarea id="practice-text-ar" placeholder="أدخل النص..."></textarea>
+                <button class="btn btn-primary" onclick="speakTextArabic(document.getElementById('practice-text-ar').value)">
+                    <i class="fas fa-play"></i> استمع
+                </button>
+            </section>
+
+            <section class="phrases-section">
+                <h2>عبارات شائعة</h2>
+                <div class="phrases-grid" id="phrases-grid-ar"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/arabic.js"></script>
+</body>
+</html>
